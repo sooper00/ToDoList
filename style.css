@@ -1,0 +1,81 @@
+.title {
+  text-align: center;
+  font-size: 3rem;
+  margin: 1rem;  
+}
+
+.add-section {
+  display: flex;
+}
+
+.add-section input{
+  flex: 1; /* 버튼을 뺀 빈 공간을 모두 채워줍니다 */
+  font-size: 1.25rem;
+  outline: none;
+  border: 1px solid black;
+}
+
+.add-button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: 0rem;
+  background: #b38665;
+  border: 1px solid black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background: #6f4e37;
+}
+
+.list-item {
+  padding: 1rem;
+  display: flex;
+  align-items: center; /* 세로 가운데 정렬 */
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+
+.list-item:hover {
+  background: #f3ebe5;
+}
+
+/* todo-item 에 마우스가 있을때만 .remove 보이기 */
+.list-item:hover .remove {
+  opacity: 1;
+}
+
+/* todo-item 사이에 윗 테두리 */
+.list-item + .list-item {
+  border-top: 1px solid #f1f3f5;
+}
+
+
+.remove {
+  margin-right: 1rem;
+  font-weight: 600;
+  opacity: 0;
+}
+
+.todo-text {
+  flex: 1; /* 체크, 엑스를 제외한 공간 다 채우기 */
+  word-break: break-all;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: #adb5bd;
+}
+
+.check-mark {
+  font-size: 1.5rem;
+  line-height: 1rem;
+  margin-left: 1rem;
+  color: #3bc9db;
+  font-weight: 800;
+}
